@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 st.set_page_config(
-    page_title="Single Player Analysis",
+    page_title="The Glory Hole",
     page_icon='data/JJGH.jpeg',
 )
 
