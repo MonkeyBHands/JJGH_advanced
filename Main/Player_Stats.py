@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Single Player Analysis",
-    page_icon="JJGH_advanced\data\JJGH.jpeg",
+    page_icon='JJGH_advanced\data\JJGH.jpeg',
 )
 
 # st.title("Single Player Deep Dive")
@@ -32,7 +32,7 @@ name = st.sidebar.multiselect(
 )
 
 st.sidebar.write("Brought to you by:")
-st.sidebar.image("JJGH_advanced\data\JJGH.jpeg", width=300)
+st.sidebar.image('JJGH_advanced\data\JJGH.jpeg', width=300)
 
 playerid=df[df['player_display_name'].isin(name)]['player_id'].unique().tolist()
 
