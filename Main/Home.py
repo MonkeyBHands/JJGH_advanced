@@ -7,6 +7,7 @@ st.set_page_config(
     page_icon='data/JJGH.jpeg',
 )
 
+st.title('Welcome to the Glory Hole')
 st.image('data/JJGH.jpeg', width=500)
 
 # # st.title("Single Player Deep Dive")
@@ -34,7 +35,7 @@ st.image('data/JJGH.jpeg', width=500)
 # )
 
 st.sidebar.write("Brought to you by:")
-st.sidebar.image('data/JJGH.jpeg', width=300)
+st.sidebar.image('JJGH_Advanced/data/JJGH.jpeg', width=300)
 
 # playerid=df[df['player_display_name'].isin(name)]['player_id'].unique().tolist()
 
