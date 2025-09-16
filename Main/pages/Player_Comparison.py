@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-st.set_page_config(page_title="NFL dataset", layout="wide", page_icon="data\JJGH.jpeg")
+st.set_page_config(page_title="NFL dataset", layout="wide", page_icon="data/JJGH.jpeg")
 
 st.title("JJGH Fantasy Player Comparison App")
 st.write("This app will help you analyze NFL data effectively.")
@@ -39,7 +39,7 @@ name = st.multiselect(
 years = st.sidebar.slider("Season", 2020, 2025, (2024, 2025))
 week = st.sidebar.slider("Week", 1, 22, (1, 18))
 st.sidebar.write("Brought to you by:")
-st.sidebar.image("data\JJGH.jpeg", width=300)
+st.sidebar.image("data/JJGH.jpeg", width=300)
 
 df_filtered = df[(df["player_display_name"].isin(name)) & (df["season"].between(years[0], years[1])) & (df["week"].between(week[0], week[1]))]
 
