@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(
     page_title="Single Player Analysis",
-    page_icon=r"\data\JJGH.jpeg",
+    page_icon="\data\JJGH.jpeg",
 )
 
 # st.title("Single Player Deep Dive")
