@@ -32,7 +32,7 @@ name = st.sidebar.multiselect(
 )
 
 st.sidebar.write("Brought to you by:")
-st.sidebar.image(r"data\JJGH.jpeg", width=300)
+st.sidebar.image("data\JJGH.jpeg", width=300)
 
 playerid=df[df['player_display_name'].isin(name)]['player_id'].unique().tolist()
 
