@@ -7,7 +7,7 @@ st.set_page_config(
     page_icon='data/JJGH.jpeg',
 )
 
-st.title('data/JJGH.jpeg', width=500)
+st.markdown('data/JJGH.jpeg', width=500)
 
 # # st.title("Single Player Deep Dive")
 # # st.write("This app will help you analyze NFL data effectively.")
