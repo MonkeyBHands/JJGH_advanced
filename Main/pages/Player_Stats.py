@@ -89,7 +89,7 @@ with my_expander:
     if post:
         week2p="POST"
     else:
-        week2p="No
+        week2p="No"
     
     ColA, ColB, ColC = st.columns(3)
 
