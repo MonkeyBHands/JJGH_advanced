@@ -129,7 +129,7 @@ with my_expander:
 df['year_week'] = df['season'] + df['week']/25
 
 
-df_filtered = df[(df["player_id"].isin(playerid)) & (df["season"].between(years2[0], years2[1])) & (df["week"].between(week2[0], week2[1])) | (df["week"].between(week2p[0], week2p[1]))]
+df_filtered = df[(df["player_id"].isin(playerid)) & (df["season"].between(years2[0], years2[1])) & ((df["week"].between(week2[0], week2[1])) | (df["week"].between(week2p[0], week2p[1])))]
 
 fig = plt.figure(figsize=(10,6))
 if not df_filtered.empty:
