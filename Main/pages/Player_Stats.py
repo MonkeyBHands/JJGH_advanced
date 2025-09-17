@@ -12,16 +12,16 @@ st.set_page_config(
 
 def load_data():
     
-    data1=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2020.csv')
-    data2=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2021.csv')
-    data3=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2022.csv')
-    data4=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2023.csv')
-    data5=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2024.csv')
-    data6=pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.csv')
+    data1=pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2020.parquet')
+    data2=pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2021.parquet')
+    data3=pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2022.parquet')
+    data4=pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2023.parquet')
+    data5=pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2024.parquet')
+    data6=pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/stats_player/stats_player_week_2025.parquet')
     df=pd.concat([data1,data2,data3,data4,data5,data6])
     return df
 
-pdata = pd.read_csv('https://github.com/nflverse/nflverse-data/releases/download/players/players.csv')
+pdata = pd.read_parquet('https://github.com/nflverse/nflverse-data/releases/download/players/players.parquet')
 
 df = load_data()
 df['year_week'] = df['season'] + df['week']/25
