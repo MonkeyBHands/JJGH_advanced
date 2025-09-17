@@ -83,7 +83,13 @@ my_expander = st.expander(label='Graph Options', expanded=False)
 with my_expander:
     
     years2 = st.slider("Season", 2020, 2025, (2024, 2025))
-    week2 = st.slider("Week", 1, 22, (1, 18))
+    week2 = st.slider("Week", 1, 18, (1, 18))
+    post=st.checkbox("Include Post-Season")
+    st.markdown("---")
+    if post:
+        week2p=(19,22)
+    else:
+        week2p=week2
     
     ColA, ColB, ColC = st.columns(3)
 
@@ -120,10 +126,10 @@ with my_expander:
         option_16 = ColE.checkbox('Fumbles')
         option_17 = ColF.checkbox('Fantasy Points')
 
-    df['year_week'] = df['season'] + df['week']/25
+df['year_week'] = df['season'] + df['week']/25
 
 
-df_filtered = df[(df["player_id"].isin(playerid)) & (df["season"].between(years2[0], years2[1])) & (df["week"].between(week2[0], week2[1]))]
+df_filtered = df[(df["player_id"].isin(playerid)) & (df["season"].between(years2[0], years2[1])) & (df["week"].between(week2[0], week2[1])) & (df["week"].between(week2p[0], week2p[1]))]
 
 fig = plt.figure(figsize=(10,6))
 if not df_filtered.empty:
