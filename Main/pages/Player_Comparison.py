@@ -31,7 +31,7 @@ df['year_week'] = df['season'] + df['week']/25
 name = st.multiselect(
     "Select Player(s)",
     df.player_display_name.unique(),
-    ["Joe Burrow","Puka Nacua","Deebo Samuel Sr.","Derrick Henry","TreVeyon Henderson","Sam LaPorta","Isiah Pacheco","Matthew Golden","Joe Mixon","Cooper Kupp","Josh Palmer"],
+    ["Joe Burrow","Daniel Jones","Puka Nacua","Deebo Samuel Sr.","Derrick Henry","TreVeyon Henderson","Sam LaPorta","Isiah Pacheco","Matthew Golden","Joe Mixon","Cooper Kupp","Josh Palmer"],
 )
 
 
